@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev
+    active: pdn
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
@@ -10,7 +10,7 @@ server:
     context-path: /platzi-market/api
 ---
 server:
-  port: 8090
+  port: 8092
 spring:
   config:
     activate:
@@ -20,8 +20,8 @@ spring:
     url: jdbc:postgresql://localhost:5432/platzi_market
     username: admin
     password: adminpassword
-#  jpa:
-#    show-sql: true
+  jpa:
+    show-sql: true
 ---
 server:
   port: ${PORT}
